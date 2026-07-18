@@ -51,16 +51,6 @@
   th:first-child { text-align: left; }
   td { padding: 13px; text-align: center; border-top: 1px solid #334155; font-size: 14px; }
   td:first-child { text-align: left; font-weight: 600; }
-
-  .charts-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-  .chart-card { background: rgba(30,41,59,0.85); border-radius: 14px; padding: 16px; }
-  .chart-card span { display: block; text-align: center; color: #94a3b8; font-size: 13px; margin-bottom: 10px; }
-  .chart-card img { width: 100%; border-radius: 8px; display: block; }
-  .chart-card.full { grid-column: 1 / -1; }
-
-  @media (max-width: 800px) {
-    .charts-grid { grid-template-columns: 1fr; }
-  }
 </style>
 </head>
 <body>
@@ -112,26 +102,6 @@
     <thead><tr><th>Model</th><th>Accuracy</th><th>Precision</th><th>Recall</th><th>F1</th><th>AUC</th><th>Latency</th></tr></thead>
     <tbody id="metricsBody"></tbody>
   </table>
-</div>
-
-<h2 class="section-title">Evaluation Visualisations</h2>
-<div class="charts-grid">
-  <div class="chart-card full">
-    <span>Confusion Matrices — All Four Models</span>
-    <img src="/static/images/all_models_confusion_grid.png">
-  </div>
-  <div class="chart-card">
-    <span>Accuracy / Precision / Recall / F1 Comparison</span>
-    <img src="/static/images/model_comparison_metrics.png">
-  </div>
-  <div class="chart-card">
-    <span>Error Comparison (False Negatives vs False Positives)</span>
-    <img src="/static/images/error_comparison.png">
-  </div>
-  <div class="chart-card full">
-    <span>Model-Only Inference Latency</span>
-    <img src="/static/images/latency_comparison.png">
-  </div>
 </div>
 
 <script>
